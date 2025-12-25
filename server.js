@@ -28,8 +28,7 @@ app.post('/get-access-token', async (req, res) => {
   try {
     const { request_token } = req.body;
     if (!request_token) return res.status(400).json({ error: 'request_token required' });
-
-    // Read API key & secret from env
+    
     const api_key = process.env.KITE_API_KEY;        // e.g. itw2n3rqalf8pgu7
     const api_secret = process.env.KITE_API_SECRET; // KEEP SECRET
 
